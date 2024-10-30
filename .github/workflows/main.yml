@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - dev
+      - stage
       
   workflow_dispatch:
 
