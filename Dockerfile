@@ -7,13 +7,13 @@ ARG mode
 ENV VITE_MODE=${mode}
 
 
-WORKDIR /app/
+WORKDIR /app
 
-COPY package*.json /app/
+COPY package*.json ./
 
 RUN npm install --prefer-offline --no-audit --progress=false
 
-COPY . ./app/
+COPY . .
 
 RUN npm run build
 
