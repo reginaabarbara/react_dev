@@ -36,7 +36,7 @@ jobs:
         - name: Build and push Docker images
           uses: docker/build-push-action@v6.9.0
           with:
-            docker_args: |
+            build_args: |
               mode=${{ github.ref_name }}
             push: true
             context: .
