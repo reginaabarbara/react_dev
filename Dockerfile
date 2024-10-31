@@ -9,7 +9,7 @@ ENV VITE_MODE=${mode}
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package*.json .
 
 RUN npm install --prefer-offline --no-audit --progress=false
 
