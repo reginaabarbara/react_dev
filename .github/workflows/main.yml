@@ -23,16 +23,29 @@ jobs:
             username: ${{ secrets.USER  }}
             password: ${{ secrets.PASSWD  }}
 
-        - name: Extract Medatada
-          id: meta
-          uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
-          with:
-            images: reginaabarbara/react_dev
-        
-        - name: Build and push Docker images
-          uses: docker/build-push-action@v6.9.0
-          with:
-            push: true
-            context: .
-            tags: ${{ steps.meta.outputs.tags }}
-            labels: ${{  steps.meta.outputs.labels  }}
+        - name: Set up Docker Buildx
+          uses: docker/setup-buildx-action@v2
+
+        - name: Build Docker Image
+          env:
+              REACT_APP_ENV: production  # Defina aqui a variável de ambiente
+          run: |
+           docker build --build-arg REACT_APP_ENV=${REACT_APP_ENV} -t my-app .
+
+        - name: Push Docker Image
+          run: |
+            echo "Implement your Docker push command here if needed"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
