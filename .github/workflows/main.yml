@@ -28,9 +28,9 @@ jobs:
 
         - name: Build Docker Image
           env:
-              REACT_APP_ENV: production  # Defina aqui a variável de ambiente
+              NODE_ENV: production  # Defina aqui a variável de ambiente
           run: |
-           docker build --build-arg REACT_APP_ENV=${REACT_APP_ENV} -t my-app .
+           docker build --build-arg NODE_ENV=${NODE_ENV} -t my-app .
 
         - name: Push Docker Image
           run: |
