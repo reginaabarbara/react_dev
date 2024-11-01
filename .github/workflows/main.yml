@@ -28,7 +28,7 @@ jobs:
 
         - name: Build Docker Image
           env:
-              NODE_ENV: production  # Defina aqui a variável de ambiente
+              NODE_ENV: development  # Defina aqui a variável de ambiente
           run: |
            docker build --build-arg NODE_ENV=${NODE_ENV} -t my-app .
 
