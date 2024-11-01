@@ -37,7 +37,7 @@ jobs:
           uses: docker/build-push-action@v6.9.0
           with:
             build-args: |
-              mode=production
+              mode=stage
             push: true
             context: .
             tags: ${{ steps.meta.outputs.tags }}
