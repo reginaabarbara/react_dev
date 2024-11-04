@@ -12,9 +12,9 @@ const App = () => {
 
   return (
     <div>
-      <h1>Bem-vindo ao meu aplicativo!</h1>
-      {/* <p>Ambiente: {env}</p> */}
-      <p>Variavel "mode" == Branch GITHUB: {mode}</p>
+      <h1>Bem-vindo ao meu aplicativo operação!</h1>
+      <p>Ambiente: {env}</p>
+      <p>mode:{mode}</p>
     </div>
   );
 };
