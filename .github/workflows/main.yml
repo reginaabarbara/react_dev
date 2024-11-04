@@ -42,3 +42,21 @@ jobs:
             context: .
             tags: ${{ steps.meta.outputs.tags }}
             labels: ${{  steps.meta.outputs.labels  }}
+            
+        - name: Push Docker Image
+          run: |
+            echo "Implement your Docker push command here if needed"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
