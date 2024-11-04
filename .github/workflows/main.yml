@@ -1,0 +1,22 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - stage
+  workflow_dispatch:
+
+jobs:
+  deploy_brand:
+    uses: reginaabarbara/deployment/.github/workflows/deployjob.yml@main
+    with:
+      app: react_dev
+      production_branch: main
+      repository: reginaabarbara/react_dev
+      docker_args: |
+        mode=${{ github.ref_name }}
+    secrets:
+      deployment_pat: ${{ secrets.DEPLOYMENT_PAT }}
+      dockerhub_pwd: ${{ secrets.PASSWD }}
