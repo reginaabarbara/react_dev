@@ -1,7 +1,7 @@
 FROM node:22 as build
 
-ARG NODE_ENV
-ENV NODE_ENV=${NODE_ENV}
+# ARG NODE_ENV
+# ENV NODE_ENV=${NODE_ENV}
 
 ARG mode
 ENV VITE_MODE=${mode}
