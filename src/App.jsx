@@ -5,7 +5,7 @@ import React from 'react';
 
 const App = () => {
   
-  const mode = import.meta.env.VITE_MODE;
+ // const mode = import.meta.env.VITE_MODE;
 
 //  const env = process.env.NODE_ENV;
 
